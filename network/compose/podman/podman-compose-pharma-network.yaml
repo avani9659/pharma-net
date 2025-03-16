@@ -1,0 +1,64 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+
+version: '3.7'
+
+services:
+
+  # manufacturer- 2 peers
+
+  peer0.manufacturer.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  peer1.manufacturer.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+  
+  # distributor-  2 peers
+
+  peer0.distributor.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  peer1.distributor.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  # retailer- 2 peers
+  peer0.retailer.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  peer1.retailer.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+  
+  
+  # consumer- 2 peers
+  peer0.consumer.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  peer1.consumer.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+  
+
+  # transporter- 2 peers  
+  peer0.transporter.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  peer1.transporter.pharma-network.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+  
+
+  # cli
+  cli:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg

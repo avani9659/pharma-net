@@ -1,0 +1,43 @@
+---
+name: network-distributor
+version: 1.0.0
+client:
+  organization: distributor
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  distributor:
+    mspid: distributorMSP
+    peers:
+    - peer0.distributor.pharma-network.com
+    - peer1.distributor.pharma-network.com
+    certificateAuthorities:
+    - ca.distributor.pharma-network.com
+peers:
+  peer0.distributor.pharma-network.com:
+    url: grpcs://localhost:9051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/distributor.pharma-network.com/tlsca/tlsca.distributor.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer0.distributor.pharma-network.com
+      hostnameOverride: peer0.distributor.pharma-network.com
+  peer1.distributor.pharma-network.com:
+    url: grpcs://localhost:10051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/distributor.pharma-network.com/tlsca/tlsca.distributor.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer1.distributor.pharma-network.com
+      hostnameOverride: peer1.distributor.pharma-network.com
+certificateAuthorities:
+  ca.distributor.pharma-network.com:
+    url: https://localhost:8054
+    caName: ca-distributor
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/distributor.pharma-network.com/ca/ca.distributor.pharma-network.com-cert.pem
+          
+    httpOptions:
+      verify: false

@@ -1,0 +1,43 @@
+---
+name: network-transporter
+version: 1.0.0
+client:
+  organization: transporter
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  transporter:
+    mspid: transporterMSP
+    peers:
+    - peer0.transporter.pharma-network.com
+    - peer1.transporter.pharma-network.com
+    certificateAuthorities:
+    - ca.transporter.pharma-network.com
+peers:
+  peer0.transporter.pharma-network.com:
+    url: grpcs://localhost:15051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/transporter.pharma-network.com/tlsca/tlsca.transporter.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer0.transporter.pharma-network.com
+      hostnameOverride: peer0.transporter.pharma-network.com
+  peer1.transporter.pharma-network.com:
+    url: grpcs://localhost:16051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/transporter.pharma-network.com/tlsca/tlsca.transporter.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer1.transporter.pharma-network.com
+      hostnameOverride: peer1.transporter.pharma-network.com
+certificateAuthorities:
+  ca.transporter.pharma-network.com:
+    url: https://localhost:11054
+    caName: ca-transporter
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/transporter.pharma-network.com/ca/ca.transporter.pharma-network.com-cert.pem
+          
+    httpOptions:
+      verify: false

@@ -1,0 +1,43 @@
+---
+name: network-manufacturer
+version: 1.0.0
+client:
+  organization: manufacturer
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  manufacturer:
+    mspid: manufacturerMSP
+    peers:
+    - peer0.manufacturer.pharma-network.com
+    - peer1.manufacturer.pharma-network.com
+    certificateAuthorities:
+    - ca.manufacturer.pharma-network.com
+peers:
+  peer0.manufacturer.pharma-network.com:
+    url: grpcs://localhost:7051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/manufacturer.pharma-network.com/tlsca/tlsca.manufacturer.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer0.manufacturer.pharma-network.com
+      hostnameOverride: peer0.manufacturer.pharma-network.com
+  peer1.manufacturer.pharma-network.com:
+    url: grpcs://localhost:8051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/manufacturer.pharma-network.com/tlsca/tlsca.manufacturer.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer1.manufacturer.pharma-network.com
+      hostnameOverride: peer1.manufacturer.pharma-network.com
+certificateAuthorities:
+  ca.manufacturer.pharma-network.com:
+    url: https://localhost:7054
+    caName: ca-manufacturer
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/manufacturer.pharma-network.com/ca/ca.manufacturer.pharma-network.com-cert.pem
+          
+    httpOptions:
+      verify: false

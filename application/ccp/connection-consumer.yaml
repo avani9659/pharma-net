@@ -1,0 +1,43 @@
+---
+name: network-consumer
+version: 1.0.0
+client:
+  organization: consumer
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  consumer:
+    mspid: consumerMSP
+    peers:
+    - peer0.consumer.pharma-network.com
+    - peer1.consumer.pharma-network.com
+    certificateAuthorities:
+    - ca.consumer.pharma-network.com
+peers:
+  peer0.consumer.pharma-network.com:
+    url: grpcs://localhost:13051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/consumer.pharma-network.com/tlsca/tlsca.consumer.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer0.consumer.pharma-network.com
+      hostnameOverride: peer0.consumer.pharma-network.com
+  peer1.consumer.pharma-network.com:
+    url: grpcs://localhost:14051
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/consumer.pharma-network.com/tlsca/tlsca.consumer.pharma-network.com-cert.pem
+          
+    grpcOptions:
+      ssl-target-name-override: peer1.consumer.pharma-network.com
+      hostnameOverride: peer1.consumer.pharma-network.com
+certificateAuthorities:
+  ca.consumer.pharma-network.com:
+    url: https://localhost:10054
+    caName: ca-consumer
+    tlsCACerts:
+      path: /home/avani/pharma-net/network/organizations/peerOrganizations/consumer.pharma-network.com/ca/ca.consumer.pharma-network.com-cert.pem
+          
+    httpOptions:
+      verify: false

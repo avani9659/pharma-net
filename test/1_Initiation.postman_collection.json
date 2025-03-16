@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "cdc2ae62-e4ab-44e7-bea8-ddfd3b3db43f",
+		"name": "1_Initiation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28974020"
+	},
+	"item": [
+		{
+			"name": "Add Manufacturer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Chennai",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "Manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transporter 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "TRA001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "FedEx",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Delhi",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "Transporter",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transporter 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "TRA002",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Blue Dart",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Bangalore",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "Transporter",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Distributor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "VG Pharma",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Vizag",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "Distributor",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Retailer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "upgrad",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Mumbai",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "Retailer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/registerCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Drug 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "2023-01-01",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						},
+						{
+							"key": "orgRole",
+							"value": "Manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/addDrug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Drug 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "002",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "2023-01-01",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						},
+						{
+							"key": "orgRole",
+							"value": "Manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/addDrug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Drug 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "003",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "2023-01-01",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						},
+						{
+							"key": "orgRole",
+							"value": "Manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/addDrug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Drug 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "004",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "2023-01-01",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						},
+						{
+							"key": "orgRole",
+							"value": "Manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/addDrug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
